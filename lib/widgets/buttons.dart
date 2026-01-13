@@ -3,31 +3,83 @@ import 'package:flutter/material.dart';
 class BtnLight extends StatelessWidget {
   final String numero;
   final void Function(String) onClick;
-  const BtnLight({super.key, required this.numero, required this.onClick});
+
+  const BtnLight({
+    super.key,
+    required this.numero,
+    required this.onClick,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(onPressed: () {
-      print("click $numero");
-      this.onClick(this.numero);
-    },
-      child: Text(this.numero, style: TextStyle(fontSize: 24, color: Colors.white)),
-      style: ButtonStyle(backgroundColor: WidgetStateProperty.all(Colors.pinkAccent)),
-     );
+    return Padding(
+      padding: const EdgeInsets.all(6),
+      child: SizedBox(
+        width: 72,
+        height: 72,
+        child: ElevatedButton(
+          onPressed: () {
+            onClick(numero);
+          },
+          style: ElevatedButton.styleFrom(
+            backgroundColor: const Color.fromARGB(255, 187, 93, 196),
+            elevation: 5,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(18),
+            ),
+          ),
+          child: Text(
+            numero,
+            style: const TextStyle(
+              fontSize: 26,
+              fontWeight: FontWeight.bold,
+              color: Color.fromARGB(255, 33, 30, 34),
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }
- class BtnDark extends StatelessWidget {
+
+class BtnDark extends StatelessWidget {
   final String signo;
   final void Function(String) onClick;
-  const BtnDark({super.key, required this.signo, required this.onClick});
+
+  const BtnDark({
+    super.key,
+    required this.signo,
+    required this.onClick,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(onPressed: () {
-      print ("click $signo");
-    },
-      child: Text(this.signo, style: TextStyle(fontSize: 24, color: Colors.white)),
-      style: ButtonStyle(backgroundColor: WidgetStateProperty.all(const Color.fromARGB(255, 206, 185, 192))),
-     );
+    return Padding(
+      padding: const EdgeInsets.all(6),
+      child: SizedBox(
+        width: 72,
+        height: 72,
+        child: ElevatedButton(
+          onPressed: () {
+            onClick(signo);
+          },
+          style: ElevatedButton.styleFrom(
+            backgroundColor: const Color.fromARGB(255, 139, 171, 201),
+            elevation: 5,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(18),
+            ),
+          ),
+          child: Text(
+            signo,
+            style: const TextStyle(
+              fontSize: 26,
+              fontWeight: FontWeight.bold,
+              color: Color.fromARGB(255, 70, 70, 70),
+            ),
+          ),
+        ),
+      ),
+    );
   }
- }
+}
