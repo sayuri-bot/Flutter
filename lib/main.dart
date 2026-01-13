@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Damian Calculadora',
       theme: ThemeData(
       
-        colorScheme: .fromSeed(seedColor: const Color.fromARGB(255, 66, 115, 155)),
+        colorScheme: .fromSeed(seedColor: const Color.fromARGB(255, 84, 157, 206)),
       ),
       home: const MyHomePage(title: 'Calculadora'),
     );
