@@ -80,8 +80,10 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(children:[
           TextField(
             controller: _ctrlDisplay,
-            decoration: InputDecoration(
-              labelText: ''
+            textAlign: TextAlign.right,
+            style: const TextStyle(fontSize: 32),
+            decoration: const InputDecoration(
+              border: OutlineInputBorder(),
             ),
           ),
         Row(children:[
