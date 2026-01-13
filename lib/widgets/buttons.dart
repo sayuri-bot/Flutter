@@ -22,7 +22,7 @@ class BtnLight extends StatelessWidget {
             onClick(numero);
           },
           style: ElevatedButton.styleFrom(
-            backgroundColor: const Color.fromARGB(255, 187, 93, 196),
+            backgroundColor: const Color.fromARGB(255, 200, 139, 206),
             elevation: 5,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(18),
@@ -64,7 +64,7 @@ class BtnDark extends StatelessWidget {
             onClick(signo);
           },
           style: ElevatedButton.styleFrom(
-            backgroundColor: const Color.fromARGB(255, 139, 171, 201),
+            backgroundColor: const Color.fromARGB(255, 192, 172, 132),
             elevation: 5,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(18),
